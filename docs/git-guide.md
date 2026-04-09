@@ -25,6 +25,27 @@
  - git pull origin <브랜치>: 원격 저장소의 최신 내용을 Pull(불러오기)해서 합침.
 
 ---
+## upstream 동기화 (Fork 저장소 최신화)
+
+### origin과 upstream의 차이
+- **origin**: 내 GitHub 계정에 Fork된 저장소
+- **upstream**: 원본 저장소 (예: `oss2026hnu/reposcore-cs`)
+
+### 원본 저장소를 upstream으로 등록
+```bash
+git remote add upstream https://github.com/oss2026hnu/reposcore-cs.git
+```
+
+### upstream 최신 변경사항 가져오기
+```bash
+git fetch upstream
+```
+
+### 내 브랜치에 반영하기
+```bash
+git merge upstream/main
+```
+
 ## git 표준 구성 요소
   협업과 배포를 위해 깃허브 저장소에 기본적으로 갖추어야 할 구성 파일 정리
 
