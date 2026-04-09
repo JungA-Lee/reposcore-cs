@@ -31,17 +31,38 @@
 - **origin**: 내 GitHub 계정에 Fork된 저장소
 - **upstream**: 원본 저장소 (예: `oss2026hnu/reposcore-cs`)
 
-### 원본 저장소를 upstream으로 등록
+---
+
+### 방법 1 — GitHub 웹페이지에서 Sync fork (권장)
+
+Codespaces 환경에서는 이 방법을 권장합니다.
+
+1. 본인 Fork된 저장소 (`github.com/본인아이디/reposcore-cs`) 접속
+2. **Sync fork** 버튼 클릭
+3. **Update branch** 클릭
+
+이것만으로 원본 저장소의 최신 내용이 반영됩니다.
+
+---
+
+### 방법 2 — 터미널 명령어로 동기화
+
+> ⚠️ **Codespaces 환경에서는 필요 없는 작업입니다.**  
+> Codespaces는 GitHub 저장소와 직접 연결되어 있으므로  
+> 위의 Sync fork 방법을 사용하면 됩니다.  
+> 로컬 환경에서 작업하는 경우에만 아래 방법을 사용하세요.
+
+원본 저장소를 upstream으로 등록합니다.
 ```bash
 git remote add upstream https://github.com/oss2026hnu/reposcore-cs.git
 ```
 
-### upstream 최신 변경사항 가져오기
+upstream 최신 변경사항을 가져옵니다.
 ```bash
 git fetch upstream
 ```
 
-### 내 브랜치에 반영하기
+내 브랜치에 반영합니다.
 ```bash
 git merge upstream/main
 ```
